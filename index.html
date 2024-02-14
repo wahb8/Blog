@@ -9,10 +9,27 @@
   <meta name="author" content="">
   <link rel="stylesheet" href="css/style.css">
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <style>
+  /* This CSS styles the body by setting the height to 100% of the viewport,
+     making the display flex, and centering content both vertically and horizontally */
+  body {
+    height: 100vh; /* vh is viewport height */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-family: Arial, sans-serif;
+  }
+
+  .centered-text {
+    font-weight: bold; /* Make the text bold */
+    font-size: 24px; /* Optional: Adjust the font size */
+  }
+</style>
 </head>
 
 <body>
-<b style="font-family: Arial; margin-top:50 rem ; padding; 10 rem"><center>A home for poorly researched ideas that I find myself repeating a lot anyway</center></b>
+<b class="centered-text"><center>A home for poorly researched ideas that I find myself repeating a lot anyway</center></b>
 
 
 <script>
