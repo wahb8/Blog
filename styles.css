@@ -15,8 +15,8 @@ body {
 
 /* Container */
 .container {
-    width: 100%; /* Set to 100% to ensure container fills the screen width */
-    max-width: 1200px; /* Add max-width to limit the container size on large screens */
+    width: 80%; /* Keep the blog list container at 80% width */
+    max-width: 1200px;
     margin: auto;
     overflow: hidden;
 }
@@ -35,7 +35,52 @@ header h1 {
     font-size: 2rem;
 }
 
-/* Blog Post Content */
+/* Blog Posts Section on the Index Page */
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+}
+
+.post {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+}
+
+.post h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
+
+/* Blog Post Content on the Individual Post Page */
 .post-content {
     background-color: #fff;
     border-radius: 8px;
@@ -50,20 +95,19 @@ header h1 {
     color: #333;
 }
 
-/* Image Styling */
 .post-content .post-image {
     width: 100%;
     height: auto;
     margin-bottom: 15px;
     border-radius: 8px;
-    object-fit: cover; /* Ensures the image scales correctly */
+    object-fit: cover;
 }
 
 /* Responsive Images */
 img {
     max-width: 100%;
     height: auto;
-    object-fit: contain; /* Ensures image is not clipped */
+    object-fit: contain;
 }
 
 .post-content p {
@@ -105,10 +149,14 @@ footer p {
 /* Responsive Design: Handle small screen sizes */
 @media screen and (max-width: 768px) {
     .container {
-        padding: 0 15px; /* Add some padding on smaller screens */
+        padding: 0 15px;
     }
     
     .post-content h2 {
-        font-size: 1.5rem; /* Adjust the heading size on mobile */
+        font-size: 1.5rem;
+    }
+
+    .blog-posts {
+        grid-template-columns: 1fr; /* Make blog posts full width on small screens */
     }
 }
