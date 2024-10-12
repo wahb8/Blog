@@ -15,7 +15,8 @@ body {
 
 /* Container */
 .container {
-    width: 80%;
+    width: 100%; /* Set to 100% to ensure container fills the screen width */
+    max-width: 1200px; /* Add max-width to limit the container size on large screens */
     margin: auto;
     overflow: hidden;
 }
@@ -49,12 +50,20 @@ header h1 {
     color: #333;
 }
 
+/* Image Styling */
 .post-content .post-image {
     width: 100%;
-    max-width: 100%; /* Ensures it doesn't exceed the container width */
-    height: auto; /* Maintains the aspect ratio */
+    height: auto;
     margin-bottom: 15px;
     border-radius: 8px;
+    object-fit: cover; /* Ensures the image scales correctly */
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures image is not clipped */
 }
 
 .post-content p {
@@ -93,8 +102,13 @@ footer p {
     opacity: 0.7;
 }
 
-/* Responsive Images */
-img {
-    max-width: 100%;
-    height: auto;
+/* Responsive Design: Handle small screen sizes */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 15px; /* Add some padding on smaller screens */
+    }
+    
+    .post-content h2 {
+        font-size: 1.5rem; /* Adjust the heading size on mobile */
+    }
 }
