@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>im as tall as james dean</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html" style="text-decoration: none; color: inherit;">rebel without a cause</a></h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <article class="post-content">
+                <h2>
+“And I still have those little synapses firing when something funny or stupid happens to me and my first impulse is to text you. And then I have to remind myself that everything is over and a part of me is forever gone”
+</h2>
+                
+
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; peepeeepooppoooo</p>
+        </div>
+    </footer>
+</body>
+</html>
